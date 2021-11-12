@@ -1,14 +1,14 @@
 pipeline {
   agent {
-    label 'slave'
+    dockerfile true
   }
-  
+
   stages{
-    stage('Hello'){
+    stage('Build'){
       steps{
-        sh 'java -version'
+        sh 'node --version'
         echo "Get working directory"
-        sh  'pwd'      
+        sh  'pwd'
       }
     }
   }
